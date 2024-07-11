@@ -10,6 +10,12 @@ body {
   font-weight: 700;
 }
 
+.d-block{
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+
 .section-padding {
   padding: 100px 0;
 }
