@@ -10,12 +10,6 @@ body {
   font-weight: 700;
 }
 
-.d-block{
-  background-position: center;
-  background-size: cover;
-  object-fit: cover;
-}
-
 .section-padding {
   padding: 100px 0;
 }
@@ -152,7 +146,7 @@ body {
     bottom: 80px;
   }
   .carousel-caption h5 {
-    font-size: 17px;
+    font-size: 25px;
   }
   .carousel-caption a {
     padding: 10px 15px;
