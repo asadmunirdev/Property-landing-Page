@@ -36,6 +36,8 @@ form.addEventListener("submit", (e) => {
 let modeBtn = document.querySelector("#mode");
 let body = document.querySelector("body");
 let navbar = document.querySelector(".navbar");
+let portfolioSection = document.querySelector("#portfolio");
+let teamSection = document.querySelector("#team");
 let currMode = "light";
 
 modeBtn.addEventListener("click", () => {
@@ -45,11 +47,55 @@ modeBtn.addEventListener("click", () => {
     body.classList.remove("light");
     navbar.classList.add("bg-dark"); // Add dark background to navbar
     navbar.classList.remove("bg-body-tertiary"); // Remove light background
+    portfolioSection.classList.add("portfolio-dark"); // Add dark background to portfolio section
+    portfolioSection.classList.remove("portfolio-light"); // Remove light background
+    teamSection.classList.add("team-dark"); // Add dark background to team section
+    teamSection.classList.remove("team-light"); // Remove light background
+
+    // Update cards inside portfolio section
+    let portfolioCards = portfolioSection.querySelectorAll(".card");
+    portfolioCards.forEach((card) => {
+      card.classList.add("bg-dark");
+      card.classList.remove("bg-white");
+      card.classList.add("text-light");
+      card.classList.remove("text-dark");
+    });
+
+    // Update cards inside team section
+    let teamCards = teamSection.querySelectorAll(".card");
+    teamCards.forEach((card) => {
+      card.classList.add("bg-dark");
+      card.classList.remove("bg-white");
+      card.classList.add("text-light");
+      card.classList.remove("text-dark");
+    });
   } else {
     currMode = "light";
     body.classList.add("light");
     body.classList.remove("dark");
     navbar.classList.remove("bg-dark"); // Remove dark background from navbar
     navbar.classList.add("bg-body-tertiary"); // Restore light background
+    portfolioSection.classList.remove("portfolio-dark"); // Remove dark background from portfolio section
+    portfolioSection.classList.add("portfolio-light"); // Add light background to portfolio section
+    teamSection.classList.remove("team-dark"); // Remove dark background from team section
+    teamSection.classList.add("team-light"); // Add light background to team section
+
+    // Update cards inside portfolio section
+    let portfolioCards = portfolioSection.querySelectorAll(".card");
+    portfolioCards.forEach((card) => {
+      card.classList.remove("bg-dark");
+      card.classList.add("bg-white");
+      card.classList.remove("text-light");
+      card.classList.add("text-dark");
+    });
+
+    // Update cards inside team section
+    let teamCards = teamSection.querySelectorAll(".card");
+    teamCards.forEach((card) => {
+      card.classList.remove("bg-dark");
+      card.classList.add("bg-white");
+      card.classList.remove("text-light");
+      card.classList.add("text-dark");
+    });
   }
 });

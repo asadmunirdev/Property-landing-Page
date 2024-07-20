@@ -16,6 +16,24 @@
   color: white !important; /* White text color for navbar brand */
 }
 
+/* Default styles */
+.portfolio p,
+.portfolio h3 {
+  color: black; /* Default color */
+}
+
+/* Light mode styles */
+.light .portfolio p,
+.light .portfolio h3 {
+  color: black; /* Black color in light mode */
+}
+
+/* Dark mode styles */
+.dark .portfolio p,
+.dark .portfolio h3 {
+  color: white; /* White color in dark mode */
+}
+
 .toggle {
   position: relative;
   display: inline-block;
